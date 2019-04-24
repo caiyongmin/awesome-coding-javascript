@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "😈 talk is cheap, show me the code",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -16,10 +17,10 @@
     "url": "https://github.com/caiyongmin/codes/issues"
   },
   "homepage": "https://github.com/caiyongmin/codes#readme",
-  "dependencies": {
-    "@types/jest": "~24.0.11",
-    "jest": "~24.7.1",
-    "ts-jest": "~24.0.2",
-    "typescript": "~3.4.4"
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-jest": "~24.7.1",
+    "jest": "~24.7.1"
   }
 }
