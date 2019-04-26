@@ -1,4 +1,4 @@
-import { isArrowFunction } from './utils';
+import isArrowFunction from './isArrowFunction';
 
 describe('is arrow function', () => {
   it('function () {} is not a arrow function', () => {

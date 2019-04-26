@@ -1,4 +1,4 @@
-export function isArrowFunction(func) {
+export default function isArrowFunction(func) {
   if (typeof func !== 'function') {
     return false;
   }
