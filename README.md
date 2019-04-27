@@ -1,2 +1,3 @@
 # codes
-😈 talk is cheap, show me the code
+
+📌 some codes, use unit tests to verify code logic.

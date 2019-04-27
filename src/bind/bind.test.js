@@ -14,12 +14,12 @@ describe('implement Function.prototype.bind2', () => {
       }
       // 函数运行并返回结果
       return self.apply(context, [...bindArgs, ...args]);
-    }
+    };
     // 修改返回函数的原型对象，实例对象就可以从原函数的原型对象上继承属性和方法
     fBound.prototype = Object.create(self.prototype);
 
     return fBound;
-  }
+  };
 
   it('use bind2', () => {
     const foo = {
@@ -29,7 +29,7 @@ describe('implement Function.prototype.bind2', () => {
       age1 = age1 || 0;
       age2 = age2 || 0;
       return this.value + age1 + age2;
-    };
+    }
     expect((bar.bind2(foo, 3))(2)).toBe((bar.bind(foo, 3))(2));
   });
 
@@ -62,7 +62,7 @@ describe('implement Function.prototype.bind2', () => {
       age1 = age1 || 0;
       age2 = age2 || 0;
       return this.value + age1 + age2;
-    };
+    }
     const bindFoo = bar.bind(foo);  // 原生 bind 操作生成的实例对象
     const bindFoo2 = bar.bind2(foo);
 

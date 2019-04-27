@@ -2,7 +2,7 @@ import isArrowFunction from './isArrowFunction';
 
 describe('is arrow function', () => {
   it('function () {} is not a arrow function', () => {
-    const f = function () {}
+    const f = function () {};
     expect(isArrowFunction(f)).toBe(false);
   });
 

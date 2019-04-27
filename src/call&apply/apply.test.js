@@ -8,7 +8,7 @@ describe('implement Function.prototype.apply2', () => {
     let context = args.shift();
     // 非严格模式下
     if (context === undefined || context === null) {
-      context = window || global;
+      context = window;
     }
     else {
       context = Object(context);
@@ -29,7 +29,7 @@ describe('implement Function.prototype.apply2', () => {
     Reflect.deleteProperty(context, __func__);
 
     return result;
-  }
+  };
 
   it('use apply2', () => {
     const foo = {
@@ -37,7 +37,7 @@ describe('implement Function.prototype.apply2', () => {
     };
     function bar() {
       return this.value;
-    };
+    }
 
     // 和原生 apply 操作进行比较
     expect(bar.apply2(foo)).toBe(bar.apply(foo));
@@ -65,7 +65,7 @@ describe('implement Function.prototype.apply2', () => {
     window.value = 2;
     function bar() {
       return this.value;
-    };
+    }
 
     // 非严格模式下的结果，严格模式下会报错
     expect(bar.apply2(null)).toBe(2);
@@ -75,7 +75,7 @@ describe('implement Function.prototype.apply2', () => {
   it('use apply2 when \'this\' is other primitive value', () => {
     function bar() {
       return this.length;
-    };
+    }
 
     // 和原生 apply 操作进行比较
     expect(bar.apply2('233')).toBe(bar.apply('233'));
@@ -87,11 +87,11 @@ describe('implement Function.prototype.apply2', () => {
     };
     function bar(name, age) {
       return `${name}: ${age}`;
-    };
+    }
     const f = function () {
       // 后面传入的参数不是一个数组
       bar.apply2(foo, 'jack', 12);
-    }
+    };
 
     expect(f).toThrowError(TypeError('CreateListFromArrayLike called on non-object'));
   });
