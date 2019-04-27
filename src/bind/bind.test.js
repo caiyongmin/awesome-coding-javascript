@@ -41,7 +41,7 @@ describe('implement Function.prototype.bind2', () => {
     }
     bar.prototype.friend = 'kevin';
 
-    const bindFoo = bar.bind(foo);
+    const bindFoo = bar.bind(foo);  // 原生 bind 操作生成的实例对象
     const bindFoo2 = bar.bind2(foo);
     bindFoo2.prototype.address = 1; // 修改返回函数的原型对象
 
@@ -63,7 +63,7 @@ describe('implement Function.prototype.bind2', () => {
       age2 = age2 || 0;
       return this.value + age1 + age2;
     };
-    const bindFoo = bar.bind(foo);
+    const bindFoo = bar.bind(foo);  // 原生 bind 操作生成的实例对象
     const bindFoo2 = bar.bind2(foo);
 
     // 对返回的函数用 call 或者 apply 重新绑定 this 对象时，this 对象不会发生改变

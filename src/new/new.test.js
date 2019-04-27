@@ -12,9 +12,11 @@ describe('use objectFactory function to implement the new method', () => {
     }
 
     const f = objectFactory(Factory, 'jack', 12);
-    expect(f.name).toBe('jack');
-    expect(f.age).toBe(12);
-    expect(f.getName()).toBe('jack');
+    const nf = new Factory('jack', 12);  // 原生的 new 操作生成的实例对象
+
+    expect(f.name).toBe(nf.name);
+    expect(f.age).toBe(nf.age);
+    expect(f.getName()).toBe(nf.getName());
   });
 
   it('Factory function return object', () => {
@@ -32,9 +34,11 @@ describe('use objectFactory function to implement the new method', () => {
     }
 
     const f = objectFactory(Factory, 'jack', 12);
-    expect(f.name).toBe('john');
-    expect(f.age).toBe(undefined);
-    expect(f.getName).toBe(undefined);
+    const nf = new Factory('jack', 12);  // 原生的 new 操作生成的实例对象
+
+    expect(f.name).toBe(nf.name);
+    expect(f.age).toBe(nf.age);
+    expect(f.getName).toBe(nf.getName);
   });
 
   it('Factory return primitive value', () => {
@@ -50,9 +54,11 @@ describe('use objectFactory function to implement the new method', () => {
     }
 
     const f = objectFactory(Factory, 'jack', 12);
-    expect(f.name).toBe('jack');
-    expect(f.age).toBe(12);
-    expect(f.getName()).toBe('jack');
+    const nf = new Factory('jack', 12);  // 原生的 new 操作生成的实例对象
+   
+    expect(f.name).toBe(nf.name);
+    expect(f.age).toBe(nf.age);
+    expect(f.getName()).toBe(nf.getName());
   });
 
   it('Factory is not a function', () => {
