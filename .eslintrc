@@ -10,7 +10,8 @@
     "SharedArrayBuffer": "readonly",
     "describe": true,
     "it": true,
-    "expect": true
+    "expect": true,
+    "module": true
   },
   "parserOptions": {
     "ecmaVersion": 2018,
