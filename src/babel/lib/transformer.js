@@ -1,4 +1,4 @@
-import { ExpressionStatement, Literal } from './types';
+import { ExpressionStatement, Literal } from './specs';
 import deepclone from './../../deepclone/deepclone';
 
 /**

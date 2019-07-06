@@ -7,7 +7,7 @@ import {
   ReturnStatement,
   Literal,
   tokenTypeMap,
-} from './types';
+} from './specs';
 
 class Parser {
   constructor(tokens) {

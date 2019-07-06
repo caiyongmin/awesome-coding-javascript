@@ -1,11 +1,19 @@
-export const before = ''
+export const input = ''
 + 'const a = 1;'
 + 'const b = 2;'
 + 'const add = (a, b) => {'
 + '  return a + b;'
 + '};';
 
-export const beforeTokens = [
+export const output = ''
++ '"use strict";'
++ 'var a = 1;'
++ 'var b = 2;'
++ 'var add = function add(a, b) {'
++ '  return a + b;'
++ '};';
+
+export const tokens = [
   { type: 'Identifier', value: 'const' },
   { type: 'Identifier', value: 'a' },
   { type: 'Equal', value: '=' },
@@ -35,7 +43,7 @@ export const beforeTokens = [
   { type: 'Colon', value: ';' }
 ];
 
-export const beforeAST = {
+export const ast = {
   type: 'Program',
   body: [
     {
@@ -125,7 +133,7 @@ export const beforeAST = {
   sourceType: 'module',
 };
 
-export const afterAST = {
+export const newAst = {
   type: 'Program',
   body: [
     {

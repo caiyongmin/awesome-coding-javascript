@@ -1,4 +1,4 @@
-import { tokenTypeMap } from './types';
+import { tokenTypeMap } from './specs';
 
 class Tokenizer {
   constructor(input) {

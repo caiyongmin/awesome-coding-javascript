@@ -1,11 +1,11 @@
 import Tokenizer from './../lib/tokenizer';
 import Parser from './../lib/parser';
-import { before, beforeAST } from './data';
+import { input, ast } from './data';
 
 describe('parser test cases', () => {
-  it('get before AST', () => {
-    const tokens = (new Tokenizer(before)).getTokens();
-    const ast = (new Parser(tokens)).getAST();
-    expect(ast).toEqual(beforeAST);
+  it('get input ast', () => {
+    const tokens = (new Tokenizer(input)).getTokens();
+    const _ast = (new Parser(tokens)).getAST();
+    expect(_ast).toEqual(ast);
   });
 });

@@ -2,7 +2,7 @@
 export default function codeGenerator(ast) {
   const generateSpecs = {
     Program: node => {
-      return node.body.map(child => codeGenerator(child)).join(';\n');
+      return node.body.map(child => codeGenerator(child)).join(';');
     },
     ExpressionStatement: node => {
       return `"${codeGenerator(node.expression)}"`;
@@ -27,8 +27,8 @@ export default function codeGenerator(ast) {
       return `function ${functionName}(${functionParams}) ${functionBody}`;
     },
     BlockStatement: node => {
-      const statementBody = `${node.body.map(child => codeGenerator(child)).join(';\n')};`;
-      return `{\n${statementBody}\n};`;
+      const statementBody = `${node.body.map(child => codeGenerator(child)).join(';')};`;
+      return `{${statementBody}};`;
     },
     ReturnStatement: node => {
       return `  return ${codeGenerator(node.argument)}`;

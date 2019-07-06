@@ -1,1 +1,3 @@
 src/babel-plugin/test
+src/babel/test/input.js
+src/babel/test/output.js
