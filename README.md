@@ -8,7 +8,7 @@
 - [x] [call](./src/call&apply/call.test.js)
 - [x] [apply](./src/call&apply/apply.test.js)
 - [x] [new](./src/new/new.test.js)
-- [x] [promise](./src/promise/index.html)
+- [x] [promise](./src/promise/promise.html)
 - [x] [throttle](./src/throttle/throttle.js)
 - [x] [debounce](./src/debounce/debounce.js)
 - [x] [deepclone](./src/deepclone/deepclone.js)
