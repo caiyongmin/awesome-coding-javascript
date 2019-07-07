@@ -1,4 +1,4 @@
-import isArrayLike from './../shared/isArrayLike';
+import isArrayLike from './../../shared/isArrayLike';
 
 export default function (...args) {
   // 使用 Symbol 创建一个全局唯一的函数名

@@ -1,4 +1,4 @@
-import isArrowFunction from '../shared/isArrowFunction';
+import isArrowFunction from './../../shared/isArrowFunction';
 
 export function objectFactory(Factory, ...args) {
   if (typeof Factory !== 'function') {

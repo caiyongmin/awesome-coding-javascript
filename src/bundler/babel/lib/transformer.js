@@ -1,5 +1,5 @@
 import { ExpressionStatement, Literal } from './specs';
-import deepclone from './../../deepclone/deepclone';
+import deepclone from './../../../javascript/deepclone/deepclone';
 
 /**
  * 定义 traverse 函数，传入 ast 和 visitor 参数，遍历 ast 上的所有结点

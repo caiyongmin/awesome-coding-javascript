@@ -1,5 +1,5 @@
 import debounce from './debounce';
-import sleep from './../shared/sleep';
+import sleep from './../../shared/sleep';
 
 describe('debounce test cases', () => {
   it('back debounce: not immediate call', async () => {

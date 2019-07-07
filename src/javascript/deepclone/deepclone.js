@@ -1,4 +1,4 @@
-import { isObject, isArray } from './../shared/is';
+import { isObject, isArray } from './../../shared/is';
 
 /**
  * 深拷贝

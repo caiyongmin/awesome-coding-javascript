@@ -1,5 +1,5 @@
 import throttle from './throttle';
-import sleep from './../shared/sleep';
+import sleep from './../../shared/sleep';
 
 describe('throttle test cases', () => {
   it('throttle call when less than interval', async () => {
