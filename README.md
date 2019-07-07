@@ -2,6 +2,8 @@
 
 📌 some codes, use unit tests to verify code logic.
 
+[![codecov](https://codecov.io/gh/caiyongmin/codes/branch/master/graph/badge.svg)](https://codecov.io/gh/caiyongmin/codes)
+
 ## JavaScript
 
 - [x] [bind](./src/bind/bind.test.js)

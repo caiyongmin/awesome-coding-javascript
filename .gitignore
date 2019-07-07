@@ -1,5 +1,8 @@
 doc
 refs
+coverage
+temp
+codecov.yml
 # Logs
 *.log
 npm-debug.log*

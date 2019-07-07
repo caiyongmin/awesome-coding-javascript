@@ -5,8 +5,14 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
     "bundle": "node src/webpack/minipack.js",
-    "webpack:plugin": "node src/webpack-plugin/example/debug.js"
+    "webpack:plugin": "node src/webpack-plugin/example/debug.js",
+    "ci": "npm run test:cov && codecov"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "repository": {
     "type": "git",
@@ -28,6 +34,7 @@
     "@babel/types": "~7.4.4",
     "babel-eslint": "~10.0.1",
     "babel-jest": "~24.7.1",
+    "codecov": "~3.5.0",
     "eslint": "~5.16.0",
     "eslint-config-airbnb": "~17.1.0",
     "jest": "~24.7.1",
