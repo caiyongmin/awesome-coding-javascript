@@ -7,8 +7,8 @@
 ## JavaScript
 
 - [x] [bind](./src/bind/bind.test.js)
-- [x] [call](./src/call&apply/call.test.js)
-- [x] [apply](./src/call&apply/apply.test.js)
+- [x] [call](./src/call/call.js)
+- [x] [apply](./src/apply/apply.js)
 - [x] [new](./src/new/new.test.js)
 - [x] [promise](./src/promise/promise.html)
 - [x] [throttle](./src/throttle/throttle.js)
