@@ -1,6 +1,6 @@
 # codes
 
-📌 some codes, use unit tests to verify code logic.
+📌 some codes, verify code logic with unit test.
 
 [![codecov](https://codecov.io/gh/caiyongmin/codes/branch/master/graph/badge.svg)](https://codecov.io/gh/caiyongmin/codes)
 
