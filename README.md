@@ -6,22 +6,22 @@
 
 ## JavaScript
 
-- [x] [bind](./src/bind/bind.test.js)
-- [x] [call](./src/call/call.js)
-- [x] [apply](./src/apply/apply.js)
-- [x] [new](./src/new/new.test.js)
-- [x] [promise](./src/promise/promise.html)
-- [x] [throttle](./src/throttle/throttle.js)
-- [x] [debounce](./src/debounce/debounce.js)
-- [x] [deepclone](./src/deepclone/deepclone.js)
+- [x] [bind](./src/javascript/bind/bind.test.js)
+- [x] [call](./src/javascript/call/call.js)
+- [x] [apply](./src/javascript/apply/apply.js)
+- [x] [new](./src/javascript/new/new.test.js)
+- [x] [promise](./src/javascript/promise/promise.html)
+- [x] [throttle](./src/javascript/throttle/throttle.js)
+- [x] [debounce](./src/javascript/debounce/debounce.js)
+- [x] [deepclone](./src/javascript/deepclone/deepclone.js)
 
 ## Bundler
 
-- [x] [babel](./src/babel/babel.js)
-  - input  => [tokenizer](./src/babel/lib/tokenizer.js)   => tokens
-  - tokens => [parser](./src/babel/lib/parser.js)      => ast
-  - ast    => [transformer](./src/babel/lib/transformer.js) => newAst
-  - newAst => [codeGenerator](./src/babel/lib/codeGenerator.js)   => output
-- [x] [webpack](./src/webpack/minipack.js)
-- [x] [webpack-plugin](./src/webpack-plugin/OpenBrowserPlugin.js)
-- [x] [babel-plugin](./src/babel-plugin/babel-plugin-simple-import.js)
+- [x] [babel](./src/bundler/babel/babel.js)
+  - input  => [tokenizer](./src/bundler/babel/lib/tokenizer.js)   => tokens
+  - tokens => [parser](./src/bundler/babel/lib/parser.js)      => ast
+  - ast    => [transformer](./src/bundler/babel/lib/transformer.js) => newAst
+  - newAst => [codeGenerator](./src/bundler/babel/lib/codeGenerator.js)   => output
+- [x] [webpack](./src/bundler/webpack/minipack.js)
+- [x] [webpack-plugin](./src/bundler/webpack-plugin/OpenBrowserPlugin.js)
+- [x] [babel-plugin](./src/bundler/babel-plugin/babel-plugin-simple-import.js)
