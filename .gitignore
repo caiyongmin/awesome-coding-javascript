@@ -8,6 +8,7 @@ codecov.yml
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.vscode
 
 # Runtime data
 pids
@@ -16,7 +17,7 @@ pids
 *.pid.lock
 
 # Not ready demo
-src/dsa
+src/dsa/**/*.html
 src/slot
 src/event-emitter
 src/async-control
