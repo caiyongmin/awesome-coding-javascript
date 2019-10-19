@@ -1,6 +1,6 @@
 # Codes
 
-📌 some codes, verify code logic with unit test.
+📌 some codes, verify code logic with unit tests.
 
 [![codecov](https://codecov.io/gh/caiyongmin/codes/branch/master/graph/badge.svg)](https://codecov.io/gh/caiyongmin/codes)
 
@@ -43,49 +43,17 @@
   - [] [insert sort](./src/dsa/sort/insertSort.js)
   - [] [merge sort](./src/dsa/sort/mergeSort.js)
   - [] [quick sort](./src/dsa/sort/quickSort.js)
-- backdate programming
-  - [] find path
-  - [] get all combin
-  - [] solve N queens
-- BFS
-  - [] bfs implementation
-  - [] print from top to buttom
-- binary search
-  - [] binary search
-- DFS
-  - [] dfs implementation
 - dynamic programming
   - [] min distance
   - [] min path sum
-  - [] regexp match
-- greedy programming
-  - [] find content children
-- hash
-  - [] not repeat string
-- heap
-  - [] heap implementation
-  - [] median number
-- link list
-  - [] link list implementation
-  - [] merge list
-- number
-  - [] thousands format
-- queue
-  - [] queue implementation
-- recursion
-  - [] jump floor
-  - [] rect cover
-- stack
-  - [] stack implementation
-- string
-  - [] KMP
-  - [] longest common subsquence
-  - [] palindrome sub string
-  - [] permutate string
-  - [] reverse string
 - tree
   - [] binary tree
   - [] binary search tree
   - [] tree symmetry
   - [] tree traversal
   - [] tree balanced
+- number
+  - [] thousands format
+- string
+  - [] longest common subsquence
+  - [] KMP
