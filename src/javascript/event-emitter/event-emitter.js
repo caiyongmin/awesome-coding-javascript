@@ -13,6 +13,7 @@ export default class EventEmitter {
 
   emit = (event, ...args) => {
     if (!this.hasBind(event)) {
+      console.warn(`this event: ${event} don't has bind listener.`);
       return;
     }
 
@@ -25,6 +26,7 @@ export default class EventEmitter {
 
   off = (event, listener) => {
     if (!this.hasBind(event)) {
+      console.warn(`this event: ${event} don't exist.`);
       return;
     }
 
