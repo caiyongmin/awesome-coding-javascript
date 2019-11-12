@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h3>HashRouter</h3>
+  <ul>
+    <li><a href="#/home">Home</a></li>
+    <li><a href="#/category">Category</a></li>
+    <li><a href="#/about">About</a></li>
+  </ul>
+  <div id="view">Default View</div>
+  <script src="./../hashRouter.js"></script>
+  <script>
+    const view = document.getElementById('view');
+    const router = new HashRouter();
+
+    router.route('/home', () => {
+      view.innerHTML = 'Home';
+    });
+
+    router.route('/category', () => {
+      view.innerHTML = 'Category';
+    });
+
+    router.route('/about', () => {
+      view.innerHTML = 'About';
+    });
+  </script>
+</body>
+</html>

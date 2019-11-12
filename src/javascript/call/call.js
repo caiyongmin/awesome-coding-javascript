@@ -1,9 +1,10 @@
 export default function (...args) {
   // 使用 Symbol 创建一个全局唯一的函数名
-  const __func__ = Symbol('__func__');
+  const func = Symbol('func');
   let context = args.shift();
+
   // 非严格模式下
-  if (context === undefined || context === null) {
+  if (context == null) {
     context = window;
   }
   else {
@@ -11,11 +12,11 @@ export default function (...args) {
   }
 
   // 赋予函数属性
-  context[__func__] = this;
+  context[func] = this;
   // 函数执行
-  const result = context[__func__](...args);
+  const result = context[func](...args);
   // 删除临时函数属性
-  Reflect.deleteProperty(context, __func__);
+  Reflect.deleteProperty(context, func);
 
   return result;
 }

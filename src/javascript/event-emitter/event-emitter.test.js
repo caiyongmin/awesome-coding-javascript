@@ -7,14 +7,14 @@ describe('EventEmitter', () => {
     emitter = new EventEmitter();
   });
 
-  it('should exposes the public API', () => {
+  it('exposes the public API', () => {
     expect(emitter).toHaveProperty('on');
     expect(emitter).toHaveProperty('emit');
     expect(emitter).toHaveProperty('once');
     expect(emitter).toHaveProperty('off');
   });
 
-  it('on', () => {
+  it('emitter.on', () => {
     const foo = jest.fn();
     const bar = jest.fn();
     emitter.on('foo', foo);
@@ -23,7 +23,7 @@ describe('EventEmitter', () => {
     expect(emitter.listeners['foo'].listeners).toEqual([foo, bar]);
   });
 
-  it('once', () => {
+  it('emitter.once', () => {
     const foo = jest.fn();
     const bar = jest.fn();
     emitter.once('foo', foo);
@@ -32,8 +32,8 @@ describe('EventEmitter', () => {
     expect(emitter.listeners['foo'].listeners).toEqual([bar]);
   });
 
-  it('emit', () => {
-    // use emitter.on
+  it('emitter.emit', () => {
+    // emitter.on
     const foo = jest.fn();
     emitter.on('foo', foo);
     emitter.emit('foo', 'x');
@@ -41,7 +41,7 @@ describe('EventEmitter', () => {
     emitter.emit('foo', 'x');
     expect(foo).toHaveBeenCalledTimes(2);
 
-    // use emitter.once
+    // emitter.once
     const bar = jest.fn();
     emitter.once('bar', bar);
     emitter.emit('bar', 'x');
@@ -50,7 +50,7 @@ describe('EventEmitter', () => {
     expect(bar).toHaveBeenCalledTimes(1);
   });
 
-  it('off, remove all listener', () => {
+  it('emitter.off, remove all listener', () => {
     const foo = jest.fn();
     emitter.on('foo', foo);
     emitter.emit('foo', 'x');
@@ -59,7 +59,7 @@ describe('EventEmitter', () => {
     expect(foo).toHaveBeenCalledTimes(1);
   });
 
-  it('off, remove specific listener', () => {
+  it('emitter.off, remove specific listener', () => {
     const foo = jest.fn();
     const bar = jest.fn();
     emitter.on('foo', foo);

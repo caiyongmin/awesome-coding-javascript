@@ -1,7 +1,20 @@
-import compile from './template-string';
+import { compile } from './template-string';
 
 describe('template string', () => {
-  it('compile', () => {
+  it('compile a paragraph', () => {
+    const template = `
+      <p><%= data.price %> 元</p>
+    `;
+    const data = {
+      price: 10.1,
+    };
+    const expectResult = '<p>10.1元</p>';
+    const result = compile(template, data);
+
+    expect(result.replace(/\s/g, '')).toBe(expectResult);
+  });
+
+  it('compile a list', () => {
     const template = `
       <ul>
         <% for(let i=0; i < data.size.length; i++) { %>
@@ -9,9 +22,16 @@ describe('template string', () => {
         <% } %>
       </ul>
     `;
-    const data = { size: [ 'X', 'XL', 'XLL' ] };
-    const expectResult = '<ul><li>X</li><li>XL</li><li>XLL</li></ul>';
+    const data = {
+      size: [ 'X', 'XL', 'XLL' ],
+    };
+    const expectResult = '<ul>'
+    + '<li>X</li>'
+    + '<li>XL</li>'
+    + '<li>XLL</li>'
+    +'</ul>';
     const result = compile(template, data);
+
     expect(result.replace(/\s/g, '')).toBe(expectResult);
   });
 });

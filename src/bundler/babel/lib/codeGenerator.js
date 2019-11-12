@@ -31,7 +31,7 @@ export default function codeGenerator(ast) {
       return `{${statementBody}};`;
     },
     ReturnStatement: node => {
-      return `  return ${codeGenerator(node.argument)}`;
+      return `return ${codeGenerator(node.argument)}`;
     },
     BinaryExpression: node => {
       return `${codeGenerator(node.left)} ${node.operator} ${codeGenerator(node.right)}`;

@@ -2,7 +2,7 @@ export const input = ''
 + 'const a = 1;'
 + 'const b = 2;'
 + 'const add = (a, b) => {'
-+ '  return a + b;'
++   'return a + b;'
 + '};';
 
 export const output = ''
@@ -10,7 +10,7 @@ export const output = ''
 + 'var a = 1;'
 + 'var b = 2;'
 + 'var add = function add(a, b) {'
-+ '  return a + b;'
++   'return a + b;'
 + '};';
 
 export const tokens = [

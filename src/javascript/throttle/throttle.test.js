@@ -1,8 +1,8 @@
 import throttle from './throttle';
 import sleep from './../../shared/sleep';
 
-describe('throttle test cases', () => {
-  it('throttle call when less than interval', async () => {
+describe('throttle', () => {
+  it('when less than interval, will throttle', async () => {
     let count = 0;
     const addCount = () => {
       count += 1;
@@ -20,7 +20,7 @@ describe('throttle test cases', () => {
     expect(count).toBe(2);
   });
 
-  it('normally call when greate than interval', async () => {
+  it('when greate than interval, normally call', async () => {
     let count = 0;
     const addCount = () => {
       count += 1;

@@ -1,4 +1,4 @@
-export default function compile(str, data) {
+export function compile(str, data) {
   if (!str || !data) {
     return str;
   }

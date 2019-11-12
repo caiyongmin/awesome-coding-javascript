@@ -1,22 +1,22 @@
 import call from './call';
 
-describe('implement Function.prototype.call2', () => {
+describe('Function.prototype.call', () => {
 
-  Function.prototype.call2 = call;
+  Function.prototype._call = call;
 
-  it('use call2', () => {
-    var foo = {
+  it('change the direction of this', () => {
+    const foo = {
       value: 1,
     };
     function bar() {
       return this.value;
     }
 
-    // 和原生 call 操作进行比较
-    expect(bar.call2(foo)).toBe(bar.call(foo));
+    // 和原生 call 操作进行验证
+    expect(bar._call(foo)).toBe(bar.call(foo));
   });
 
-  it('use call2 in constructor', () => {
+  it('change the direction of this, use in constructor', () => {
     function Product(name, price) {
       this.name = name;
       this.price = price;
@@ -27,30 +27,30 @@ describe('implement Function.prototype.call2', () => {
       this.category = 'food';
     }
     function Food2(name, price) {
-      Product.call2(this, name, price);
+      Product._call(this, name, price);
       this.category = 'food';
     }
 
-    // 和原生 call 操作进行比较
+    // 和原生 call 操作进行验证
     expect(new Food2('cheese', 5).name).toBe(new Food('cheese', 5).name);
   });
 
-  it('use call2 when \'this\' is null or undefined', () => {
+  it('when \'this\' argument is null or undefined', () => {
     window.value = 2;
     function bar() {
       return this.value;
     }
     // 非严格模式下的结果，严格模式下会报错
-    expect(bar.call2(null)).toBe(2);
-    expect(bar.call2(undefined)).toBe(2);
+    expect(bar._call(null)).toBe(2);
+    expect(bar._call(undefined)).toBe(2);
   });
 
-  it('use call2 when \'this\' is other primitive value', () => {
+  it('when \'this\' is other primitive value, excute success', () => {
     function bar() {
       return this.length;
     }
 
     // 和原生 call 操作进行比较
-    expect(bar.call2('233')).toBe(bar.call('233'));
+    expect(bar._call('123')).toBe(bar.call('123'));
   });
 });

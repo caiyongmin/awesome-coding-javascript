@@ -29,13 +29,13 @@
     "max-len": ["error", { "code": 100 }],
     "function-paren-newline": 0,
     "object-curly-newline": 0,
-    "no-use-before-define": 1,
+    "no-use-before-define": 0,
     "global-require": 0,
     "import/no-dynamic-require": 0,
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "no-underscore-dangle": 0,
     "camelcase": 0,
-    "semi": 1
+    "semi": 1,
   }
 }

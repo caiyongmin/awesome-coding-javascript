@@ -49,7 +49,7 @@ function createGraph(entry) {
   // 把它放到一个数组里面，遍历这个数组，解析每个对象的依赖关系
   const queue = [entryModule];
 
-  for (const mod of queue) {
+  for (const mod of queue) {  // eslint-disable-line no-unused-vars
     // 添加一个 mapping 属性，保存文件依赖关系的一个 Map 对象，结构: { 'relativePath': id }
     mod.mapping = {};
     const dirname = path.dirname(mod.filename);
@@ -65,9 +65,10 @@ function createGraph(entry) {
   return queue;
 }
 
-function bundle(entry, output) {
-  const graph = createGraph(entry);
+module.exports = function minipack(config) {
+  const { entry, output } = config;
 
+  const graph = createGraph(entry);
   let modules = '';
   graph.forEach(mod => {
     modules += `${mod.id}: [
@@ -95,9 +96,4 @@ function bundle(entry, output) {
 
   // 结果写入到指定文件
   fs.writeFileSync(output, result);
-}
-
-bundle(
-  path.join(__dirname, './example/entry.js'),
-  path.join(__dirname, 'output/index.js')
-);
+};

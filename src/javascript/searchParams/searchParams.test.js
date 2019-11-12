@@ -1,7 +1,7 @@
 import SearchParams from './searchParams';
 
-describe('SearchParams', () => {
-  it('parseStringParams', () => {
+describe('URL SearchParams', () => {
+  it('parse string params', () => {
     const searchParams1 = new SearchParams({ a: 1, b: 2, c: '哈哈' });
     const searchParams2 = new SearchParams('a=1&b=2&c=%E5%93%88%E5%93%88');
     const searchParams3 = new URLSearchParams('a=1&b=2&c=%E5%93%88%E5%93%88');
@@ -9,7 +9,7 @@ describe('SearchParams', () => {
     expect(searchParams2.toString()).toBe(searchParams3.toString());
   });
 
-  it('get', () => {
+  it('searchParams.get', () => {
     const paramString = 'a=1&a=2&b=3&c=%E5%93%88%E5%93%88';
     const searchParams1 = new SearchParams(paramString);
     const searchParams2 = new URLSearchParams(paramString);
@@ -18,7 +18,7 @@ describe('SearchParams', () => {
     expect(searchParams1.get('c')).toBe(searchParams2.get('c'));
   });
 
-  it('getAll', () => {
+  it('searchParams.getAll', () => {
     const paramString = 'a=1&a=2&b=3&c=%E5%93%88%E5%93%88';
     const searchParams1 = new SearchParams(paramString);
     const searchParams2 = new URLSearchParams(paramString);
@@ -27,7 +27,7 @@ describe('SearchParams', () => {
     expect(searchParams1.getAll('c')).toEqual(searchParams2.getAll('c'));
   });
 
-  it('set', () => {
+  it('searchParams.set', () => {
     const paramString = '';
     const searchParams1 = new SearchParams(paramString);
     const searchParams2 = new URLSearchParams(paramString);
@@ -37,7 +37,7 @@ describe('SearchParams', () => {
     expect(searchParams1.toString()).toBe(searchParams2.toString());
   });
 
-  it('append', () => {
+  it('searchParams.append', () => {
     const paramString = '';
     const searchParams1 = new SearchParams(paramString);
     const searchParams2 = new URLSearchParams(paramString);
@@ -47,7 +47,7 @@ describe('SearchParams', () => {
     expect(searchParams1.toString()).toBe(searchParams2.toString());
   });
 
-  it('has', () => {
+  it('searchParams.has', () => {
     const paramString = '';
     const searchParams1 = new SearchParams(paramString);
     const searchParams2 = new URLSearchParams(paramString);
@@ -57,18 +57,16 @@ describe('SearchParams', () => {
     expect(searchParams1.has('b')).toBe(searchParams2.has('b'));
   });
 
-  it('for .. of', () => {
+  it('searchParams for .. of', () => {
     const paramString = 'topic=api&topic=hpi&q=va';
     const searchParams1 = new SearchParams(paramString);
     const searchParams2 = new URLSearchParams(paramString);
     const result1 = [];
     const result2 = [];
-    // eslint-disable-next-line no-unused-vars
-    for (const p1 of searchParams1) {
+    for (const p1 of searchParams1) {  // eslint-disable-line no-unused-vars
       result1.push(p1);
     }
-    // eslint-disable-next-line no-unused-vars
-    for (const p2 of searchParams2) {
+    for (const p2 of searchParams2) {  // eslint-disable-line no-unused-vars
       result2.push(p2);
     }
 
@@ -76,8 +74,8 @@ describe('SearchParams', () => {
   });
 });
 
-describe('SearchParams catch throw error', () => {
-  it('get', () => {
+describe('URL SearchParams catch throw error', () => {
+  it('searchParams.get', () => {
     const searchParams = new SearchParams('');
     expect(() => searchParams.get()).toThrowError(
       'Failed to execute \'get\' on \'URLSearchParams\':'
@@ -85,7 +83,7 @@ describe('SearchParams catch throw error', () => {
     );
   });
 
-  it('getAll', () => {
+  it('searchParams.getAll', () => {
     const searchParams = new SearchParams('');
     expect(() => searchParams.getAll()).toThrowError(
       'Failed to execute \'getAll\' on \'URLSearchParams\':'
@@ -93,7 +91,7 @@ describe('SearchParams catch throw error', () => {
     );
   });
 
-  it('set', () => {
+  it('searchParams.set', () => {
     const searchParams = new SearchParams('');
     expect(() => searchParams.set()).toThrowError(
       'Failed to execute \'set\' on \'URLSearchParams\':'
@@ -105,7 +103,7 @@ describe('SearchParams catch throw error', () => {
     );
   });
 
-  it('append', () => {
+  it('searchParams.append', () => {
     const searchParams = new SearchParams('');
     expect(() => searchParams.append()).toThrowError(
       'Failed to execute \'append\' on \'URLSearchParams\':'
@@ -117,7 +115,7 @@ describe('SearchParams catch throw error', () => {
     );
   });
 
-  it('has', () => {
+  it('searchParams.has', () => {
     const searchParams = new SearchParams('');
     expect(() => searchParams.has()).toThrowError(
       'Failed to execute \'has\' on \'URLSearchParams\':'

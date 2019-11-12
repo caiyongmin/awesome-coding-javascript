@@ -94,7 +94,7 @@ export function createStore(reducer, initialState, enhancer) {
       isDispatching = true;
       currentState = currentReducer(currentState, action);
     }
-    finally {
+    finally {  // finally
       isDispatching = false;
     }
 

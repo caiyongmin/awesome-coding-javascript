@@ -1,16 +1,16 @@
-import isArrowFunction from './../../shared/isArrowFunction';
+import { isArrowFunction } from './../../shared/is';
 
 export function objectFactory(Factory, ...args) {
   if (typeof Factory !== 'function') {
-    throw new Error('Factory need be a function');
+    throw new Error('need be a function argument');
   }
 
   if (isArrowFunction(Factory)) {
-    throw new Error('arrow function not allowed');
+    throw new Error('arrow function is not allowed');
   }
 
   const instance = Object.create(Factory.prototype);  // 创建实例对象
-  const ret = Factory.apply(instance, args);  // 执行构造函数
+  const result = Factory.apply(instance, args);  // 执行构造函数
 
-  return ret instanceof Object ? ret : instance;
+  return result instanceof Object ? result : instance;
 }

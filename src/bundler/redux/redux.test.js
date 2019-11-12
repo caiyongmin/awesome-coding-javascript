@@ -1,6 +1,6 @@
-import * as reducers from './example/reducers';
+import * as reducers from './test/reducers';
 import { createStore, combineReducers, compose, applyMiddleware } from './redux';
-import { addTodo, unknownAction, dispatchInMiddle, addTodoAsync } from './example/actions';
+import { addTodo, unknownAction, dispatchInMiddle, addTodoAsync } from './test/actions';
 import { thunkMiddleware } from './middlewares';
 
 describe('createStore', () => {
