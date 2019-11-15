@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caiyongmin/codes.git"
+    "url": "git+https://github.com/caiyongmin/awesome-coding-javascript.git"
   },
   "keywords": [],
   "author": "caiyongmin <645589265@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/caiyongmin/codes/issues"
+    "url": "https://github.com/caiyongmin/awesome-coding-javascript/issues"
   },
-  "homepage": "https://github.com/caiyongmin/codes#readme",
+  "homepage": "https://github.com/caiyongmin/awesome-coding-javascript#readme",
   "devDependencies": {
     "@babel/core": "~7.4.4",
     "@babel/parser": "~7.4.4",
