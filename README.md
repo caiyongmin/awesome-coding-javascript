@@ -1,6 +1,6 @@
 # awesome-coding-javascript
 
-📌 持续构建个人的源码库，更多信息请看[这篇文章]()。
+📌 持续构建个人的源码库，更多信息请看[这篇文章](https://juejin.im/post/5dccb516f265da79650cd136)。
 
 [![codecov](https://codecov.io/gh/caiyongmin/codes/branch/master/graph/badge.svg)](https://codecov.io/gh/caiyongmin/codes) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](README.md)
 
