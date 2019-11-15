@@ -145,7 +145,7 @@ describe('Promise', () => {
     const promise = new Promise(function (resolve, reject) {
       setTimeout(function () {
         reject(time);
-        setTimeout(function () {  // 设定之后再 reject 一次
+        setTimeout(function () {  // 设定之后再 resolve 一次
           resolve(time);
         }, 0);
       }, time);

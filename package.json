@@ -1,7 +1,7 @@
 {
-  "name": "codes",
+  "name": "awesome-coding-javascript",
   "version": "1.0.0",
-  "description": "😈 talk is cheap, show me the code",
+  "description": "talk is cheap, show me the code",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",

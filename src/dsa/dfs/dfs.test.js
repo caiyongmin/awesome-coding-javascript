@@ -19,6 +19,17 @@ describe('DFS', () => {
     results = [1, 2, 4, 5, 3, 6, 10];
   });
 
+  it('rootNode is empty or visitor is not function', () => {
+    const nodes1 = [];
+    DFSTraverse(null, node => {
+      nodes1.push(node.name);
+    });
+    const nodes2 = [];
+    DFSTraverseNR(root);
+    expect(nodes1).toEqual([]);
+    expect(nodes2).toEqual([]);
+  });
+
   it('depth-first search', () => {
     const nodes = [];
     DFSTraverse(root, node => {

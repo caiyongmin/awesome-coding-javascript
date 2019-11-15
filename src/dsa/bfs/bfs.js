@@ -1,3 +1,7 @@
+/**
+ * 广度优先算法
+ * 广度优先算法是一种遍历或搜索树或图的方法，沿着树的宽度遍历树的节点。
+ */
 export function BFSTraverseNR(rootNode, visitor) {
   if (!rootNode || typeof visitor !== 'function') {
     console.warn('rootNode is empty or visitor is not function');

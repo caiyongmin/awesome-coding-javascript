@@ -1,3 +1,10 @@
+/**
+ * matrix[i][j] = Math.min(
+ *    matrix[i - 1][j] + 1,
+ *    matrix[i][j - 1] + 1,
+ *    matrix[i - 1][j - 1] + (str1[i - 1] === str2[j - 1] ? 0 : 1)
+ * );
+ */
 export default function minEditDistance(str1, str2) {
   if (!str1 || !str2) {
     return Math.max(str1.length, str2.length);

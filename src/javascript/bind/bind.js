@@ -4,7 +4,7 @@ export default function (...bindArgs) {
   // 传进来的 this 对象
   let context = bindArgs.shift();
 
-  // 非严格模式下
+  // 非严格模式下，传 null 或者 undeinfed，context 等于 window 对象
   if (context == null) {
     context = window;
   }

@@ -1,3 +1,7 @@
+/**
+ * 三数之和
+ */
+
 function threeEqualZero(nums, third, results) {
   if (nums.length < 2) {
     return;

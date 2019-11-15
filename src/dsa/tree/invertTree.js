@@ -1,3 +1,7 @@
+/**
+ * 翻转二叉树
+ * 递归解法
+ */
 export function invertTree(root) {
   if (!root) {
     return null;
@@ -12,6 +16,10 @@ export function invertTree(root) {
   return root;
 }
 
+/**
+ * 翻转二叉树
+ * 非递归解法
+ */
 export function invertTreeNR(root) {
   if (!root) {
     return null;

@@ -1,3 +1,7 @@
+/**
+ * 二数之和
+ */
+
 export function twoSum1(arr, target) {
   if (typeof target !== 'number') {
     throw new Error('target must be a number');

@@ -27,13 +27,3 @@ export default function debounce(func, interval, immediate) {
     }
   };
 }
-
-export function debounceTimer(event, time) {
-  let timer = null;
-  return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      event.apply(this, args);
-    }, time);
-  };
-}

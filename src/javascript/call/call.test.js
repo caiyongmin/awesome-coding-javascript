@@ -12,7 +12,7 @@ describe('Function.prototype.call', () => {
       return this.value;
     }
 
-    // 和原生 call 操作进行验证
+    // 和原生的 call 操作进行比较验证
     expect(bar._call(foo)).toBe(bar.call(foo));
   });
 
@@ -31,7 +31,7 @@ describe('Function.prototype.call', () => {
       this.category = 'food';
     }
 
-    // 和原生 call 操作进行验证
+    // 和原生的 call 操作进行比较验证
     expect(new Food2('cheese', 5).name).toBe(new Food('cheese', 5).name);
   });
 
@@ -40,7 +40,7 @@ describe('Function.prototype.call', () => {
     function bar() {
       return this.value;
     }
-    // 非严格模式下的结果，严格模式下会报错
+    // 这是非严格模式下的运行结果，严格模式下会报错
     expect(bar._call(null)).toBe(2);
     expect(bar._call(undefined)).toBe(2);
   });
@@ -50,7 +50,7 @@ describe('Function.prototype.call', () => {
       return this.length;
     }
 
-    // 和原生 call 操作进行比较
+    // 和原生的 call 操作进行比较验证
     expect(bar._call('123')).toBe(bar.call('123'));
   });
 });

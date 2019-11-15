@@ -1,3 +1,7 @@
+/**
+ * 数组去重
+ */
+
 // use object record item and filter
 export const unique1 = arr => {
   if (!Array.isArray(arr) || !arr.length) {

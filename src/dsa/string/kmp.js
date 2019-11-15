@@ -1,3 +1,6 @@
+/**
+ * 获取部分匹配表
+ */
 function getPartMatchTable(str) {
   if (!str) {
     return [];
@@ -21,6 +24,9 @@ function getPartMatchTable(str) {
   return matchTable;
 }
 
+/**
+ * 求子串的索引
+ */
 export default function kmp(sourceStr, subStr) {
   const matchTable = getPartMatchTable(subStr);
 
@@ -37,6 +43,8 @@ export default function kmp(sourceStr, subStr) {
           break;
         }
         else {
+          // 移动位数 = 已匹配的字符数 - 对应的部分匹配值
+          // 这里需要先减 1，因为等下会加 1
           i += (j + 1) - matchTable[j] - 1;
         }
       }

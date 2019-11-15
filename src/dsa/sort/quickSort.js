@@ -1,7 +1,6 @@
 /**
  * 快速排序，它采用了一种分治的策略。
  * 时间复杂度 O(nlgn)
- * 快速排序是不稳定的
  * @param {Array} arr sorted array
  */
 export default function quickSort(arr) {

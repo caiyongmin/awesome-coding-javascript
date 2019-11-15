@@ -12,7 +12,7 @@ describe('Function.prototype.apply', () => {
       return this.value;
     }
 
-    // 和原生 apply 操作进行验证
+    // 和原生的 apply 操作进行比较验证
     expect(bar._apply(foo)).toBe(bar.apply(foo));
   });
 
@@ -30,7 +30,7 @@ describe('Function.prototype.apply', () => {
       this.category = 'food';
     }
 
-    // 和原生 apply 操作进行验证
+    // 和原生的 apply 操作进行比较验证
     expect(new Food('cheese', 5).name).toBe(new Food2('cheese', 5).name);
   });
 
@@ -50,7 +50,7 @@ describe('Function.prototype.apply', () => {
       return this.length;
     }
 
-    // 和原生 apply 操作进行验证
+    // 和原生的 apply 操作进行比较验证
     expect(bar._apply('123')).toBe(bar.apply('123'));
   });
 

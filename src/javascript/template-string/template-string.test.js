@@ -1,6 +1,15 @@
 import { compile } from './template-string';
 
 describe('template string', () => {
+  it('template is empty', () => {
+    const template = `
+      <p><%= data.price %> 元</p>
+    `;
+    const result = compile(template, null);
+
+    expect(result).toBe(template);
+  });
+
   it('compile a paragraph', () => {
     const template = `
       <p><%= data.price %> 元</p>

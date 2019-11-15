@@ -16,9 +16,11 @@ export function reOrderArray(arr) {
   let start = 0;
   let end = arr.length - 1;
   while (start < end) {
+    // 碰到偶数 start 前进一位
     while (arr[start] % 2 === 1) {
       start++;
     }
+    // 碰到奇数 end 前进一位
     while(arr[end] % 2 === 0) {
       end--;
     }

@@ -1,5 +1,5 @@
-import BinaryTree from './../tree/binaryTree';
-import { findAllNodePath } from './findAllNodePath';
+import BinaryTree from '../tree/binaryTree';
+import { findAllNodePath } from '../recursion/findAllNodePath';
 
 describe('find all node path in tree', () => {
   it('find all node path in tree', () => {

@@ -10,8 +10,9 @@ export default function throttle(func, interval) {
     const curTime = new Date();
     // 大于间隔时才执行函数的逻辑
     if (curTime - startTime > interval) {
-      // 开始时间复位
+      // 重设开始时间
       startTime = curTime;
+      // 执行函数
       func.apply(this, args);
     }
   };

@@ -6,7 +6,7 @@ class TreeNode {
 }
 
 /**
- * rebuild tree from preorder and inorder array
+ * 由先序遍历和中序遍历重建二叉树
  */
 export function rebuildFromPreAndInOrder(preorder, inorder) {
   if (!Array.isArray(preorder) || !Array.isArray(inorder)) {
@@ -32,7 +32,7 @@ export function rebuildFromPreAndInOrder(preorder, inorder) {
 }
 
 /**
- * rebuild tree from inorder and postorder array
+ * 由中序遍历和后序遍历重建二叉树
  */
 export function rebuildFromInAndPostOrder(inorder, postorder) {
   if (!Array.isArray(inorder) || !Array.isArray(postorder)) {

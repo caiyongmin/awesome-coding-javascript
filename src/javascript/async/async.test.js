@@ -19,4 +19,19 @@ describe('async generator', () => {
       done();
     });
   });
+
+  it('auto excute generator, when throw error', done => {
+    const errorMsg = 'error';
+    const asyncFunc = asyncGenerator(function*() {
+      const s = yield 's';
+      yield Promise.reject(errorMsg);
+      return s;
+    });
+
+    asyncFunc()
+      .catch(res => {
+        expect(res).toBe(errorMsg);
+        done();
+      });
+  });
 });

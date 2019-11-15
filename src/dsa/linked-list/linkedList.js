@@ -7,6 +7,7 @@
  * - 双向链表，双向链表相比单向链表，每个节点多一个指针指向前一节点。
  * 下面是双向链表的实现：
  */
+
 export class ListNode {
   constructor(val) {
     this.val = val;
@@ -15,7 +16,7 @@ export class ListNode {
 }
 
 /**
- * double linked list
+ * 双链表
  */
 export class LinkedList {
   static from(sourceArr) {

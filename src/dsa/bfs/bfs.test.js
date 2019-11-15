@@ -19,6 +19,17 @@ describe('BFS', () => {
     results = [1, 2, 3, 4, 5, 6, 10];
   });
 
+  it('rootNode is empty or visitor is not function', () => {
+    const nodes1 = [];
+    BFSTraverseNR(null, node => {
+      nodes1.push(node.name);
+    });
+    const nodes2 = [];
+    BFSTraverseNR(root);
+    expect(nodes1).toEqual([]);
+    expect(nodes2).toEqual([]);
+  });
+
   it('breadth-first search non-recursion', () => {
     const nodes = [];
     BFSTraverseNR(root, node => {

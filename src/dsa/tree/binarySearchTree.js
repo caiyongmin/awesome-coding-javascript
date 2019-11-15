@@ -1,5 +1,17 @@
 import BinaryTree from './binaryTree';
 
+/**
+ * 二分查找树
+ *
+ * 采用分治的思想：
+ * 把一个复杂的问题分成两个或者多个相似的子问题，再把子问题分成更小的子问题
+ * 直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并
+ *
+ * 相对于动态规划：
+ * 分治法中对于每次出现的子问题均求解，导致同样的子问题被反复求解，故产生指数增长的时间复杂度，效率较低。
+ * 而动态规划法用表保存已求解过的子问题的解，再次碰到同样的子问题时不必重新求解
+ * 而只需查询答案，故可获得多项式级时间复杂度，效率较高；
+ */
 export class BinarySearchTree extends BinaryTree {
   static from(array) {
     const root = new BinarySearchTree();

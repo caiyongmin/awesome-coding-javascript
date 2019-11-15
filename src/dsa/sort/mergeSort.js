@@ -18,7 +18,6 @@ function merge(left, right) {
  * 归并排序首先把数组对半分，直到分成多个长度为1的原子数组（长度为1，必然有序）
  * 再把这些数组向上合并，保证每次合并后的数组都是有序的。
  * 时间复杂度 O(nlgn)
- * 插入排序是稳定的
  * @param {Array} arr sorted array
  */
 export default function mergeSort(arr) {

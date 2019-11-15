@@ -30,11 +30,13 @@ export default class EventEmitter {
       return;
     }
 
+    // remove all listener
     if (!listener) {
       delete this.listeners[event];
       return;
     }
 
+    // remove specific listener
     const listeners = this.listeners[event].listeners;
     listeners.forEach(listener => {
       const index = listeners.indexOf(listener);

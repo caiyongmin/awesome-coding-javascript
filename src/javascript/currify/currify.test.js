@@ -7,14 +7,14 @@ describe('currify', () => {
     expect(() => currify(() => {})).not.toThrow(err);
   });
 
-  it('fn arguments length is zero', () => {
+  it('when fn arguments length is zero', () => {
     const sum = () => 1;
     const currySum = currify(sum);
     expect(currySum()).toBe(1);
     expect(() => currySum()(1)).toThrow('not a function');
   });
 
-  it('fn arguments length greate than zero', () => {
+  it('when fn arguments length greate than zero', () => {
     const sum = (a, b, c) => a + b + c;
     const currySum = currify(sum);
     expect(currySum()(1)(2)(3)).toBe(6);

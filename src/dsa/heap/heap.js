@@ -16,7 +16,7 @@
  */
 
 /**
- * 实现堆
+ * 实现堆（最大堆、最小堆）
  */
 export default class Heap {
   constructor(type, nums) {

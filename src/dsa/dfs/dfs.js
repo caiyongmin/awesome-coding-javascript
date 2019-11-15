@@ -1,3 +1,7 @@
+/**
+ * 深度优先算法
+ * 深度优先算法是一种用于遍历或搜索树或图的算法。沿着树的深度遍历树的节点，尽可能深的搜索树的分支。
+ */
 export function DFSTraverse(rootNode, visitor) {
   if (!rootNode || typeof visitor !== 'function') {
     console.warn('rootNode is empty or visitor is not function');
@@ -14,6 +18,10 @@ export function DFSTraverse(rootNode, visitor) {
   }
 }
 
+/**
+ * 深度优先非递归解法
+ * 使用栈来解决
+ */
 export function DFSTraverseNR(rootNode, visitor) {
   if (!rootNode || typeof visitor !== 'function') {
     console.warn('rootNode is empty or visitor is not function');

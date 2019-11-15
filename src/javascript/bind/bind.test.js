@@ -15,7 +15,7 @@ describe('Function.prototype.bind', () => {
     }
     const newBar = bar._bind(foo, 3);
     expect(typeof newBar).toBe('function');
-    // 和原生 bind 操作进行验证
+    // 和原生的 bind 操作进行比较验证
     expect(newBar(2)).toBe((bar.bind(foo, 3))(2));
   });
 
@@ -65,7 +65,7 @@ describe('Function.prototype.bind', () => {
       return this.value + age1 + age2;
     }
 
-    // 非严格模式下的结果，严格模式下会报错
+    // 这是非严格模式下的运行结果，严格模式下会报错
     expect(bar._bind(null, 3)(1)).toBe(6);
     expect(bar._bind(undefined, 3)(1)).toBe(6);
   });

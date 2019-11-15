@@ -1,3 +1,6 @@
+/**
+ * 反转链表
+ */
 export function reverseList(headNode) {
   let current;
   let result = headNode;

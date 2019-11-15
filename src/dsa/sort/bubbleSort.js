@@ -2,7 +2,6 @@
  * 元素两两就近进行比较，发现次序相反则交换排序，直到没有这种次序相反情况出现
  * 最好情况下，数组已经有序，只需要遍历一遍，O(n)
  * 最坏情况下，需要 O(n^2)
- * 冒泡排序是稳定的
  * @param {Array} arr sorted array
  */
 export default function bubbleSort(arr) {
@@ -27,6 +26,7 @@ export default function bubbleSort(arr) {
         arr[j - 1] = temp;
       }
     }
+    // 检查 complete 的值，如果此次遍历数没有发生交互顺序，则提前跳出循环，排序结束
     if (complete) {
       break;
     }
