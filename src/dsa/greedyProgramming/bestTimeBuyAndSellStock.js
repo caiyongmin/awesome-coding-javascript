@@ -25,3 +25,4 @@
  * 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
  */
 
+export function bestTimeBuyAndSellStock() {}

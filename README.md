@@ -6,20 +6,22 @@
 
 ---
 
-## 一、JavaScript 原生和常用方法的代码实现
+## 1. JavaScript 原生和常用方法的代码实现
 
-- [x] [call](./src/javascript/call) / [apply](./src/javascript/apply) / [bind](./src/javascript/bind) 实现
+- [x] [call](./src/javascript/call) / [apply](./src/javascript/apply) 实现
+- [x] [bind](./src/javascript/bind) 实现
 - [x] [new](./src/javascript/new) 实现
 - [x] [deepclone](./src/javascript/deepclone) 深拷贝实现
-- [x] [throttle](./src/javascript/throttle) / [debounce](./src/javascript/debounce) 防抖/节流实现
+- [x] [throttle](./src/javascript/throttle) 节流实现
+- [x] [debounce](./src/javascript/debounce) 防抖实现
 - [x] [URL 参数解析](./src/javascript/searchParams) 实现
 - [x] [Promise](./src/javascript/promise) 实现
 - [x] [async/await](./src/javascript/async) 实现
 - [x] [订阅/发布](./src/javascript/event-emitter) 实现
-- [x] [柯里化](./src/javascript/currify/currify.js) 实现
+- [x] [柯里化](./src/javascript/currify) 实现
 - [x] [模板字符串](./src/javascript/template-string) 实现
 
-## 二、常用的库和插件的代码实现
+## 2. 常用的库和插件的代码实现
 
 - [x] [Webpack](./src/bundler/webpack) 的模拟实现
 - [x] [Webpack-Plugin](./src/bundler/webpack-plugin) 的实现
@@ -27,7 +29,7 @@
   - input  => [tokenizer](./src/bundler/babel/lib/tokenizer.js)  => tokens
   - tokens => [parser](./src/bundler/babel/lib/parser.js)  => AST
   - AST    => [transformer](./src/bundler/babel/lib/transformer.js)  => newAST
-  - newAST => [codeGenerator](./src/bundler/babel/lib/codeGenerator.js)  => output
+  - newAST => [code generator](./src/bundler/babel/lib/codeGenerator.js)  => output
 - [x] [Babel-Plugin](./src/bundler/babel-plugin) 的实现
 - [x] [Redux](./src/bundler/redux) 的模拟实现
 - [x] [Router](./src/bundler/router) 的模拟实现
@@ -36,11 +38,11 @@
 - [x] [React](https://github.com/caiyongmin/creact) 的模拟实现（在另外一个仓库，使用 TypeScript 实现）
 - [x] [Egg.js](https://github.com/caiyongmin/tiny-egg) 的模拟实现（在另外一个仓库，暂无单元测试）
 
-## 三、JavaScript 实现的数据结构和常用算法
+## 3. JavaScript 实现的数据结构和常用算法
 
-### 数据结构
+### 3.1 数据结构
 
-- [Linked List](./src/dsa/linked-list) 链表
+-  [Linked List](./src/dsa/linked-list) 链表
   - [x] [linked list](./src/dsa/linked-list/linkedList.js) 双链表实现
   - [x] [merge linked list](./src/dsa/linked-list/mergeList.js) 合并两个链表
   - [x] [reverse linked list](./src/dsa/linked-list/reverseList.js) 反转链表
@@ -48,12 +50,15 @@
   - [x] [remove duplicate](./src/dsa/array/unique.js) 数组去重
   - [x] [two sum](./src/dsa/array/twoSum.js) 两个数之和
   - [x] [three sum](./src/dsa/array/threeSum.js) 三个数之和
-- [x] [Heap](./src/dsa/heap) 堆
+- [Heap](./src/dsa/heap) 堆
+  - [x] [heap](./src/dsa/heap/heap.js) 堆的实现
   - [x] [get min K nums](./src/dsa/heap/getMinKNums.js) 获取一段数组里面最小的 k 个数
-- [x] [Stack](./src/dsa/stack) 栈
-- [x] [Queue](./src/dsa/queue) 队列
-- [ ] [Set](./src/dsa/set) 集合
-- [ ] [Hash Table](./src/dsa/hash) 散列表
+- [Stack](./src/dsa/stack) 栈
+  - [x] [stack](./src/dsa/stack/stack.js) 集合实现
+- [Queue](./src/dsa/queue) 队列
+  - [x] [queue](./src/dsa/queue/queue.js) 集合实现
+- [Set](./src/dsa/set) 集合
+- [Hash Table](./src/dsa/hash) 散列表
 - [Tree](./src/dsa/tree) 树
   - [x] [binary tree](./src/dsa/tree/binaryTree.js) 二叉树
   - [x] [tree traversal](./src/dsa/tree/treeTraversal.js) 二叉树的先序/中序/后序非递归遍历
@@ -61,7 +66,7 @@
   - [x] [invert tree](./src/dsa/tree/invertTree.js) 翻转二叉树
   - [x] [tree symmetry](./src/dsa/tree/treeSymmetry.js) 是否是镜像二叉树
 
-### 算法
+### 3.2 算法
 
 - [Sort](./src/dsa/sort) 排序
   - [x] [bubble sort](./src/dsa/sort/bubbleSort.js)  冒泡排序
@@ -70,6 +75,7 @@
   - [x] [merge sort](./src/dsa/sort/mergeSort.js) 归并排序
   - [x] [quick sort](./src/dsa/sort/quickSort.js) 快速排序
 - [Divide and conquer]() 分治
+  - [x] [binary search](./src/dsa/divideAndConquer/binarySearch.js) 二分查找
   - [x] [binary search tree](./src/dsa/tree/binarySearchTree.js) 二叉搜索树
 - [Recursion](./src/dsa/recursion) 递归
   - [x] [jump floor](./src/dsa/recursion/jumpFloor.js) 跳台阶
@@ -84,18 +90,17 @@
   - [x] [min edit distance](./src/dsa/dynamicProgramming/minEditDistance.js) 最小编辑距离
   - [x] [min path sum](./src/dsa/dynamicProgramming/minPathSum.js) 最少路径问题
 - [Backdate Programming](./src/dsa/backTracking) 回溯算法
-  - [ ] [solve N queens](./src/dsa/backTracking/solveNQueens.js) N 皇后问题
+  - [x] [solve N queens](./src/dsa/backTracking/solveNQueens.js) N 皇后问题
 - [Greedy Programming](./src/dsa/greedyProgramming) 贪心算法
-  - [ ] [best time to buy and sell stock](./src/dsa/greedyProgramming/bestTimeBuyAndSellStock.js) 买股票
-  - [ ] [distribution cookie](./src/dsa/greedyProgramming/distributionCookie.js) 分发饼干
+  - [x] [distribution cookie](./src/dsa/greedyProgramming/distributionCookie.js) 分发饼干
 
-### 其他
+### 3.3 其他
 
+- [Number](./src/dsa/number) 数字
+  - [x] [thousands format](./src/dsa/number/thousands.js) 千分位
 - [String](./src/dsa/string) 字符串
   - [x] [longest common substring](./src/dsa/string/longestCommonSub.js) 最长公共子串
   - [x] [KMP](./src/dsa/string/kmp.js) KMP 算法求子串的索引位置
-- [Number](./src/dsa/number) 数字
-  - [x] [thousands format](./src/dsa/number/thousands.js) 千分位
 
 ---
 
