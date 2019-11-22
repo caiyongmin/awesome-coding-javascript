@@ -42,7 +42,7 @@
 
 ### 3.1 数据结构
 
--  [Linked List](./src/dsa/linked-list) 链表
+- [Linked List](./src/dsa/linked-list) 链表
   - [x] [linked list](./src/dsa/linked-list/linkedList.js) 双链表实现
   - [x] [merge linked list](./src/dsa/linked-list/mergeList.js) 合并两个链表
   - [x] [reverse linked list](./src/dsa/linked-list/reverseList.js) 反转链表
@@ -54,9 +54,9 @@
   - [x] [heap](./src/dsa/heap/heap.js) 堆的实现
   - [x] [get min K nums](./src/dsa/heap/getMinKNums.js) 获取一段数组里面最小的 k 个数
 - [Stack](./src/dsa/stack) 栈
-  - [x] [stack](./src/dsa/stack/stack.js) 集合实现
+  - [x] [stack](./src/dsa/stack/stack.js) 实现
 - [Queue](./src/dsa/queue) 队列
-  - [x] [queue](./src/dsa/queue/queue.js) 集合实现
+  - [x] [queue](./src/dsa/queue/queue.js) 实现
 - [Set](./src/dsa/set) 集合
 - [Hash Table](./src/dsa/hash) 散列表
 - [Tree](./src/dsa/tree) 树
@@ -90,7 +90,7 @@
   - [x] [min edit distance](./src/dsa/dynamicProgramming/minEditDistance.js) 最小编辑距离
   - [x] [min path sum](./src/dsa/dynamicProgramming/minPathSum.js) 最少路径问题
 - [Backdate Programming](./src/dsa/backTracking) 回溯算法
-  - [x] [solve N queens](./src/dsa/backTracking/solveNQueens.js) N 皇后问题
+  - [x] [solve N queens](./src/dsa/backTracking/solveNQueens.js) N皇后问题
 - [Greedy Programming](./src/dsa/greedyProgramming) 贪心算法
   - [x] [distribution cookie](./src/dsa/greedyProgramming/distributionCookie.js) 分发饼干
 
