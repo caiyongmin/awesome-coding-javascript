@@ -19,7 +19,7 @@ export function isIterator(val) {
 }
 
 export function isArrayLike(obj) {
-  const MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
+  const MAX_ARRAY_INDEX = Math.pow(2, 32) - 1;
 
   // 先排除 window 对象
   if (obj === window) {

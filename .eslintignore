@@ -1,3 +1,4 @@
 src/babel-plugin/test
 src/babel/test/input.js
 src/babel/test/output.js
+src/bundler/webpack/output/index.js
